@@ -1,6 +1,33 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #eee;
+    background: #fff;
+}
+
+.jumbotron {
+    background: radial-gradient(#0683f8, #004b6d);
+}
+
+h1 {
+    position: relative;
+    margin-top: 5%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 4em;
+}
+
+h1::before {
+    content: attr(data-text);
+    position: absolute;
+    transform-origin: bottom;
+    transform: rotateX(180deg);
+    line-height: 0.9em;
+    background: linear-gradient(0deg,#fff 0, transparent 80%);
+    -webkit-background-clip: text;
+    color: transparent;
+    opacity: 0.7;
 }
 
 #searches{
@@ -15,7 +42,6 @@ body {
 form {
     width: 30%;
     float: right;
-    padding: 20px;
 }
 
 label {
@@ -33,9 +59,10 @@ input[type="text"] {
 
 button, input[type="submit"] {
 color: #ffffff;   
-background-color: #0683f8 ;
+background: radial-gradient(#0683f8, #004b6d);
 border-radius: 5px;
 padding: 5px 20px;
 font-size: 18px;
 box-shadow: 2px 2px 3px #bbb;
 }
+
